@@ -1,0 +1,37 @@
+{
+    "extends": "./tsconfig.base.json",
+    "compilerOptions": {
+        "target": "es2018",
+        "sourceMap": true,
+        "declarationDir": "./dist",
+        "noEmit": false,
+        "allowJs": false,
+        "declaration": true,
+        "outDir": "./dist",
+        "baseUrl": "./",
+        "rootDir": "./src",
+        "paths": {
+            "~/*": ["./src/*"],
+            "assets/*": ["./src/assets/*"],
+            "components/*": ["./src/components/*"],
+            "hooks/*": ["./src/hooks/*"],
+            "pages/*": ["./src/pages/*"],
+            "services/*": ["./src/services/*"],
+            "tests/*": ["./tests/*"],
+            "types/*": ["./src/types/*"],
+            "utils/*": ["./src/utils/*"]
+        }
+    },
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "src/**/*.d.ts"
+    ],
+    "exclude": [
+        "dist",
+        "node_modules",
+        "src/**/*.test.tsx",
+        "src/**/*.stories.tsx",
+        "src/stories/**"
+    ]
+}

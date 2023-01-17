@@ -1,0 +1,22 @@
+{
+    "extends": "./tsconfig.build.json",
+    "compilerOptions": {
+        "module": "amd",
+        "isolatedModules": false,
+        "declarationDir": null,
+        "outDir": "./dist",
+        "out": "dist/index.js"
+    },
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "src/**/*.d.ts"
+    ],
+    "exclude": [
+        "dist",
+        "node_modules",
+        "src/**/*.test.tsx",
+        "src/**/*.stories.tsx",
+        "src/stories/**"
+    ]
+}
