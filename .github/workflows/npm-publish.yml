@@ -12,8 +12,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
+      - run: echo legacy-peer-deps=true >> .npmrc
+      - run: echo //registry.npmjs.org/:_authToken=${NPM_TOKEN} >> .npmrc
       - run: npm ci
-      - run: echo //registry.npmjs.org/:_authToken=${NPM_TOKEN} > .npmrc
         env:
           NPM_TOKEN: ${{secrets.npm_token}}
       - run: npm run build:full
