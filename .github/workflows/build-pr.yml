@@ -1,11 +1,13 @@
-name: Publish Release
+name: Build Package
 
 on:
+  pull_request:
+    branches: [master]
   release:
     types: [created]
 
 jobs:
-  publish:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -13,9 +15,5 @@ jobs:
         with:
           node-version: 16
       - run: echo legacy-peer-deps=true >> .npmrc
-      - run: echo //registry.npmjs.org/:_authToken=${NPM_TOKEN} >> .npmrc
       - run: npm ci
-        env:
-          NPM_TOKEN: ${{secrets.npm_token}}
-      - run: npm run build:full
-
+      - run: npm run build
