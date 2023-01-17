@@ -44,7 +44,7 @@
         "rollup-plugin-peer-deps-external": "^2.2.4",
         "rollup-plugin-terser": "^7.0.2",
         "tsc-alias": "^1.6.11",
-        "tsconfig-paths-webpack-plugin": "^3.5.2",
+        "tsconfig-paths-webpack-plugin": "^4.0.0",
         "typescript": "^4.6.3",
         "yup": "^0.32.11"
     },
