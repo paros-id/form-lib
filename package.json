@@ -31,7 +31,7 @@
         "@storybook/testing-library": "0.0.13",
         "@types/react": "^18.0.5",
         "ajv": "^8.11.0",
-        "babel-loader": "^8.2.5",
+        "babel-loader": "^9.1.2",
         "esbuild": "^0.14.47",
         "glob": "^8.0.3",
         "minimatch": "^5.1.0",
