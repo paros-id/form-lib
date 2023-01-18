@@ -1,5 +1,7 @@
 import ReactForm from "~/ReactForm";
-import { ValidationResult } from "~/types/validators";
+
+import type { FormObject } from "~/types/ReactForm";
+import type { ValidationResult } from "~/types/validators";
 
 function createResultObj() {
     const result = {
@@ -7,7 +9,7 @@ function createResultObj() {
     }
 }
 
-export async function validateFunc<T>(form: ReactForm<T, "function">, values: T, context: any = {}): Promise<ValidationResult<T> | null> {
+export async function validateFunc<T extends FormObject>(form: ReactForm<T, "function">, values: T, context: any = {}): Promise<ValidationResult<T> | null> {
     const { field, cause } = context || {};
 
     if((cause === "blur" && !form.validateOnBlur) || typeof form.validation !== "function") {
