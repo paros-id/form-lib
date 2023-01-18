@@ -8,7 +8,7 @@ import path from "path";
 import fs from "fs";
 
 const packageJson = require("./package.json");
-const minimatch = require("minimatch");
+const { minimatch } = require("minimatch");
 
 
 const Glob = require("glob");
