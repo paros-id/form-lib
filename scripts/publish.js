@@ -1,6 +1,5 @@
 const { minimatch } = require("minimatch");
 const { promisify } = require("util");
-const cp = require("child_process");
 const Glob = require("glob");
 const path = require("path");
 const fs = require("fs");
@@ -70,15 +69,4 @@ async function processSourcemaps() {
 
     console.log("Copying package.json...");
     await copy("package.json");
-
-    console.log("Publishing...");
-    process.stdin.resume();
-    cp.spawnSync("npm", ["publish"], {
-        cwd: dirname("dist"),
-        shell: true,
-        stdio: [process.stdin, process.stdout, process.stderr]
-    });
-
-    console.log("Done!");
-    process.exit(0);
 })();
