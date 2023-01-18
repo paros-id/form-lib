@@ -1,4 +1,4 @@
-const minimatch = require("minimatch");
+const { minimatch } = require("minimatch");
 const { promisify } = require("util");
 const cp = require("child_process");
 const Glob = require("glob");
