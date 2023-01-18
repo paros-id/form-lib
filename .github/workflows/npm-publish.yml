@@ -16,6 +16,6 @@ jobs:
       - name: Install dependencies and build
         run: npm ci && npm run build:full
       - name: Publish package on NPM 📦
-        run: cd dist && npm publish
+        run: cd dist && npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
