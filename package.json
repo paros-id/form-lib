@@ -1,6 +1,6 @@
 {
     "name": "@paros-ui/form-lib",
-    "version": "1.3.31",
+    "version": "1.4.0",
     "description": "A slow rewrite of an older project",
     "main": "index.js",
     "scripts": {
